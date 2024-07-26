@@ -1,15 +1,9 @@
-
-@font-face {
-    font-family: 'FiatFont';
-    src: url('/fonts/fiat-font.ttf') format('truetype');
-}
-
 .container {
-    max-width: 2000px; /* Largura máxima para centralizar o grid em telas maiores */
-    margin: 0 auto; /* Centraliza o contêiner */
-    padding: 0 20px; /* Padding opcional para evitar que o conteúdo encoste nas bordas */
+    max-width: 2000px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
 }
-/* FATHER DIV */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -51,7 +45,7 @@
 /* ------SQUARE'S CONTENT ------ */
 
 /* ----- SQUARE 1 -----*/
-/* Father class (.square1-content) */
+
 
 .square1-content {
     background: linear-gradient(
@@ -62,23 +56,22 @@
         #89DF5D 75%,
         #98E857 100%);
         display: flex;
-        justify-content: flex-end; /* Alinha a imagem à direita */
+        justify-content: flex-end;
         align-items: center;
         padding-left: 20px;
         padding-right: 0; 
         padding-top: 20px; 
         padding-bottom: 20px; 
-        box-sizing: border-box; /* Inclui padding no tamanho da div */
+        box-sizing: border-box; 
         object-fit: contain;
 }
        
 .laptop-img {
     max-width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
+    height: auto; 
 }
 
-/* ----- SQUARE 2: SOMOS UMA AGÊNCIA DE MARKETIN -----*/
-/* Father class (.square2-content) */
+/* ----- SQUARE 2: AGÊNCIA DE MARKETING DIGITAL ----- */
 
 .square2_content {
     background-color: #4DD95F; 
@@ -89,16 +82,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
 }
+
 .square2_headline {
     font-family: 'system-ui';
     font-style: normal;
     font-weight: 800;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 35px;
     color: #B8F54B;
-    transition: transform 0.3s ease, font-size 0.3s ease, line-height 0.3s ease;
 }
 
 .square2_subheadline {
@@ -109,25 +101,14 @@
     line-height: 10px;
     color: #fff;
     white-space: nowrap;
-    transition: transform 0.3s ease, font-size 0.3s ease, line-height 0.3s ease;
 }
 
 .first-line, .second-line {
-    display: block; /* Garante que cada parte ocupe uma linha separada */
-}
-
-.square2_content:hover .square2_headline {
-    font-size: 36px; /* Aumenta o tamanho do texto */
-    line-height: 40px;
-}
-
-.square2_content:hover .square2_subheadline {
-    font-size: 31px; /* Aumenta o tamanho do texto */
-    line-height: 17px;
+    display: block; 
 }
 
 /* ----- SQUARE 3: FIAT ----- */
-/* Father class (.square3-content) */
+
 
 .square3-content {
     display: flex;
@@ -136,26 +117,15 @@
     transition: background-color 0.3s ease;
 }
 
-/* .fiat-text:hover .fiat-logo {
-    color: rgb(184, 25, 43);
-} */
-
-.fiat-logo {
-    font-family: 'FiatFont', Arial, sans-serif;
-    font-size: 100px;
-    font-weight: 700;
-    color: black;
-}
-
 /* ----- SQUARE 4 ----- */
-/* Father class (.square4-content) */
+
 .square4-content {
     background-color: #1BB577; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Espaço interno para o texto */
+    padding: 20px; 
 }
 
 .square4-headline {
@@ -185,56 +155,91 @@
     color: rgb(0, 75, 43);
 }
 
-
 /* ----- SQUARE 5 ----- */
-/* Father class () */
 
 .square5-content {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+.square5-content .hover-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
+.square5-content:hover .hover-overlay {
+    width: 100%;
+    opacity: 1;
 }
 
 .award-img {
-    max-width: 80%; /* Garante que a imagem ocupe no máximo 80% da largura da div */
-    max-height: 80%; /* Garante que a imagem ocupe no máximo 80% da altura da div */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 80%; 
+    max-height: 80%; 
+    height: auto;/
+}
+.award-text {
+    font-size: 16px;
+    color: #b7fc00; 
+    margin: 0;
+    padding: 0 10px; 
 }
 
+.award-text strong {
+    font-family: 'system-ui', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 28px;
+    color: rgb(184, 245, 75);
+
+}
+
+
+
 /* ----- SQUARE 6: GOOGLE ----- */
-/* Father class (.square8-content) */
+
 .square6-content {
     background-color: #B8F54B;
 }
 
-
-
 /* ----- SQUARE 7: CIELO LOGO ----- */
-/* Father class (.square8-content) */
-.cielo-logo {
+
+.image-logo {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cielo-logo .logo {
-    max-width: 60%; /* Garante que a imagem ocupe no máximo 100% da largura da div */
-    height: auto; /* Mantém a proporção da imagem */
+.image-logo .logo {
+    max-width: 60%; 
+    height: auto; 
     transition: opacity 0.3s ease;
     position: absolute;
 }
 
 /* ----- SQUARE 8 ----- */
-/* Father class (.square8-content) */
+
 
 .square8-content {
-    background-color: #4DD95F; /* Cor de fundo especificada */
+    background-color: #4DD95F; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Espaço interno para o texto */
+    padding: 20px; 
 }
 
 .square8-headline {
@@ -247,8 +252,8 @@
 }
 .square8-underline {
     display: inline-block;
-    border-bottom: 4px solid #b8f54b; /* Linha amarela abaixo do texto */
-    padding-bottom: 2px; /* Espaço entre o texto e a linha */
+    border-bottom: 4px solid #b8f54b;
+    padding-bottom: 2px; 
 }
 
 .square8-subheadline {
@@ -260,15 +265,131 @@
     color: rgb(255, 255, 255);
 }
 
+/*----- EFEITOS HOVER -----/*
 
+/* 1) LOGO HOVERS */
+
+.img-black-and-white {
+    filter: grayscale(100%); 
+    transition: filter 0.5s ease; 
+}
+
+
+.img-black-and-white:hover {
+    filter: grayscale(0%); 
+}
+
+
+/* 2) TEXT HOVERS */
+.hover-effect {
+    transition: all 0.3s ease; 
+}
+
+.square2_headline, .square2_subheadline,
+.square4-headline, .square4-highlight, .square4-percentage,
+.square8-headline, .square8-subheadline {
+    transition: font-size 0.3s ease; 
+}
+
+/*SQUARE 2 */
+.hover-effect:hover .square2_headline {
+    font-size: 29px; 
+    
+}
+
+.hover-effect:hover .square2_subheadline {
+    font-size: 27px; 
+    
+}
+
+/* SQUARE 4 */
+.hover-effect:hover .square4-headline {
+    font-size: 33px; 
+   
+}
+
+.hover-effect:hover .square4-highlight {
+    font-size: 47px; 
+ 
+}
+
+.hover-effect:hover .square4-percentage {
+    font-size: 75px;
+    
+}
+
+
+/* SQUARE 8 */
+.hover-effect:hover .square8-headline {
+    font-size: 38px; 
+    
+}
+
+.hover-effect:hover .square8-subheadline {
+    font-size: 29px; 
+    
+}
+
+/* 3) OVERLAY HOVER /*
+/* Efeito de desfoque e aumento para o square 1 */
+.blur-effect {
+    position: relative;
+    overflow: hidden; 
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+
+.blur-effect:hover .laptop-img {
+    filter: blur(5px); 
+    transform: scale(1.1); 
+    transition: filter 0.3s ease, transform 0.3s ease; 
+}
+
+.laptop-img {
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+
+.overlay {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+
+.overlay-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #0af00a; 
+}
+
+
+.overlay-subtitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0eaa0e; 
+}
+
+
+.blur-effect:hover .overlay {
+    opacity: 1;
+}
 
 
 /* breakpoint - mobile */
 @media(max-width: 900px) {
     .grid-container {
         grid-template-columns: 1fr; /* Uma coluna */
-        grid-auto-rows: 40vh; /* Altura ajustada para ocupar mais da tela verticalmente */
-        height: 100vh; /* Garante que a grade ocupe a altura total da tela */
+        grid-auto-rows: 40vh; 
+        height: 100vh; 
     }
     
     .grid-item {
@@ -277,17 +398,17 @@
     }
 
     .square1-content {
-        justify-content: flex-end; /* Alinha a imagem à direita */
-        padding-left: 10px; /* Mantém o padding fixo à esquerda */
-        padding-right: 0; /* Remove padding à direita */
-        padding-top: 10px; /* Reduz o padding em telas menores */
-        padding-bottom: 10px; /* Reduz o padding em telas menores */
-        box-sizing: border-box; /* Inclui padding no tamanho da div */
+        justify-content: flex-end; 
+        padding-left: 10px; 
+        padding-right: 0; 
+        padding-top: 10px; 
+        padding-bottom: 10px;
+        box-sizing: border-box; 
         overflow: hidden;
     }
 
     .laptop-img {
         max-width: 100%;
-        height: auto; /* Mantém a proporção da imagem */
-    }
+        height: auto; 
+}
 }
