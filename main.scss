@@ -1,0 +1,190 @@
+$primary-color: #B8F54B;
+$bg_color: #0eaa0e;
+$light-green:#00b600;
+$dark-green:#004b2b;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.grid-container {
+    margin: 0 auto;
+    max-width: 1660px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	grid-auto-rows: 240px;
+	grid-auto-flow: dense;
+    .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        text-align: center;
+        position: relative;
+        background-color:$bg_color;
+        transition: 0.3s all ease;
+        overflow: hidden;
+        .img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s all ease;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            padding: 1rem;
+            .title{
+                font-size: 18px;
+                color: #fff;
+                transition: 0.3s transform ease;
+                strong{
+                    font-weight: 800;
+                    color: $primary-color;
+                    font-size: 22px;
+                }
+                i{
+                    font-weight: 800;
+                    color: $dark-green;
+                    line-height: 0.9em;
+                    font-style: normal;
+                    font-size: 22px;
+                }
+            }
+        }
+
+        &.gradient{
+            background: linear-gradient( to right, #59C96F 0%, #68D068 25%, #78D764 50%, #89DF5D 75%, #98E857 100%);
+        }
+        &.big-square {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        &.horizontal-rectangle {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+        &.zoom{
+            &:hover{
+                .overlay{
+                    .title{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        &.zoom-img{
+            &:hover{
+               .img{
+                transform: scale(1.1);
+               }
+            }
+        }
+        &.grayscale{
+            &:hover{
+               img{
+                    filter: grayscale(0%);
+               }
+            }
+        }
+        &.blur{
+            &:hover{
+                .img{
+                    filter: blur(5px);
+                }
+            }
+        }
+        &.flip{
+            background-color: transparent;
+            transition: 0.5s all ease;
+            .overlay{
+                opacity: 1;
+                background-color: #000;  
+                transform: scaleX(0);
+                transition: 0.3s all ease;
+                transition-delay: 0.1s;
+            }
+            &:hover{
+                .img{
+                    transform: rotateY(180deg);
+                }
+                .overlay{
+                    transform: scaleX(1);
+                }
+            }
+        }
+        &--grayimg{
+            img{
+                display: block;
+                filter: grayscale(100%);
+            }
+        }
+
+        &--big-font{
+            .overlay{
+                .title{
+                    i{
+                        font-size: 2.5em;
+                    }
+                }
+            }
+        }
+        &--text-shadow{
+            .overlay{
+                justify-content: flex-start;
+                padding: 3rem 0 0 0;
+                .title{
+                    color: $light-green;
+                    font-weight: 800;
+                    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+                    font-size: 38px;
+                    strong{
+                        color: #004b34;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+        &--text-hidden{
+            .overlay{
+                opacity: 0;
+            }
+            &:hover{
+                .overlay{
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 767px) {
+	.grid-container {
+		grid-template-columns: 1fr;
+		grid-auto-rows: auto;
+        .grid-item {
+            &.big-square {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+            &.horizontal-rectangle {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+	}
+
+}
