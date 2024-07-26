@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Grid</title>
+    <title>Gride</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -13,15 +13,17 @@
    <div class="container">
     <div class="grid-container">
         
-        <!----- SQUARE 1 ------>
-        <div class="grid-item big-square square1-content">
+        <!----- SQUARE 1: NOTEBOOK ------>
+        <div class="grid-item big-square square1-content blur-effect">
             <img src="/images/mockup-laptop.png" alt="Laptop com logos" class="laptop-img">
+            <div class="overlay">
+                <h2 class="overlay-title">Título Aqui</h2>
+                <p class="overlay-subtitle">Subtítulo Aqui</p>
+            </div>
         </div>
-        
-
 
         <!----- SQUARE 2: AGÊNCIA DE MARKETING DIGITAL: como podemos ajudar? ----->
-        <div class="grid-item small-square square2_content">
+        <div class="grid-item small-square square2_content hover-effect">
             <p>
                 <span class="square2_headline">
                     <span class="first-line">Agência de</span>
@@ -32,12 +34,12 @@
         </div>
 
         <!----- SQUARE 3: FIAT ----->
-        <div class="grid-item small-square square3-content">
-            <p class="fiat-logo">FIAT</p>
+        <div class="grid-item small-square square3-content image-logo img-black-and-white">
+            <img src="/images/fiat-logo.png" alt="Fiat Logo" class="logo">
         </div>
 
         <!----- SQUARE 4: COMO UM IMPÉRIO DE CONTEÚDO ----->
-        <div class="grid-item horizontal-rectangle square4-content">
+        <div class="grid-item horizontal-rectangle square4-content hover-effect">
             <p>
                 <span class="square4-headline">Como um império de conteúdo</span><br>
                 <span class="square4-highlight">aumentou</span><br>
@@ -45,8 +47,17 @@
                 <span class="square4-highlight">as vendas</span>
             </p>
         </div>
+
          <!----- SQUARE 5: PREMIO RD----->
         <div class="grid-item small-square square5-content">
+            <div class="hover-overlay">
+                <p class=>
+                    Fomos considerados a<br>
+                    <span class="award-text"><strong>Melhor agência em<br>
+                    RD Station de 2022!</strong><br></span>
+                    Entenda!
+                         </p>
+            </div>
             <img src="/images/rd-trophy.png" alt="Prêmio RD" class="award-img">
         </div>
 
@@ -54,20 +65,18 @@
         <div class="grid-item small-square square6-content">Small square</div>
 
          <!----- SQUARE 7 - CIELO LOGO ----->
-        <div class="grid-item small-square cielo-logo">
+        <div class="grid-item small-square image-logo img-black-and-white">
             <img src="/images/cielo-logo-gray.png" alt="Cielo Logo" class="logo">
 
         </div>
 
          <!----- SQUARE 8: DIAGNÓSTICO GRATUITO DE MARKETING DIGITAL ----->
-        <div class="grid-item small-square  square8-content">
+        <div class="grid-item small-square  square8-content hover-effect">
             <p>
                 <span class="square8-headline">Diagnóstico</span><br>
                 <span class="square8-headline"><span class="square8-underline">Gratuito</span></span><br>
                 <span class="square8-subheadline">de Marketing Digital</span>
             </p>
-
-
         </div>
 
     </div> 
