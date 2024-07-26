@@ -1,0 +1,293 @@
+
+@font-face {
+    font-family: 'FiatFont';
+    src: url('/fonts/fiat-font.ttf') format('truetype');
+}
+
+.container {
+    max-width: 2000px; /* Largura máxima para centralizar o grid em telas maiores */
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 0 20px; /* Padding opcional para evitar que o conteúdo encoste nas bordas */
+}
+/* FATHER DIV */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    grid-auto-flow: dense;
+    gap: 0px;
+}
+
+/* SON DIV */
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+    float: left;
+}
+
+/* SQUARE'S SIZES */
+.big-square {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.small-square {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.small-square {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.horizontal-rectangle {
+    grid-column: span 2;
+    grid-row: span 1;
+}   
+
+/* ------SQUARE'S CONTENT ------ */
+
+/* ----- SQUARE 1 -----*/
+/* Father class (.square1-content) */
+
+.square1-content {
+    background: linear-gradient(
+        to right,
+        #59C96F 0%,
+        #68D068 25%,
+        #78D764 50%,
+        #89DF5D 75%,
+        #98E857 100%);
+        display: flex;
+        justify-content: flex-end; /* Alinha a imagem à direita */
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 0; 
+        padding-top: 20px; 
+        padding-bottom: 20px; 
+        box-sizing: border-box; /* Inclui padding no tamanho da div */
+        object-fit: contain;
+}
+       
+.laptop-img {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* ----- SQUARE 2: SOMOS UMA AGÊNCIA DE MARKETIN -----*/
+/* Father class (.square2-content) */
+
+.square2_content {
+    background-color: #4DD95F; 
+    color: #B8F54B; 
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.square2_headline {
+    font-family: 'system-ui';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 35px;
+    color: #B8F54B;
+    transition: transform 0.3s ease, font-size 0.3s ease, line-height 0.3s ease;
+}
+
+.square2_subheadline {
+    font-family: 'system-ui';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 10px;
+    color: #fff;
+    white-space: nowrap;
+    transition: transform 0.3s ease, font-size 0.3s ease, line-height 0.3s ease;
+}
+
+.first-line, .second-line {
+    display: block; /* Garante que cada parte ocupe uma linha separada */
+}
+
+.square2_content:hover .square2_headline {
+    font-size: 36px; /* Aumenta o tamanho do texto */
+    line-height: 40px;
+}
+
+.square2_content:hover .square2_subheadline {
+    font-size: 31px; /* Aumenta o tamanho do texto */
+    line-height: 17px;
+}
+
+/* ----- SQUARE 3: FIAT ----- */
+/* Father class (.square3-content) */
+
+.square3-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* .fiat-text:hover .fiat-logo {
+    color: rgb(184, 25, 43);
+} */
+
+.fiat-logo {
+    font-family: 'FiatFont', Arial, sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    color: black;
+}
+
+/* ----- SQUARE 4 ----- */
+/* Father class (.square4-content) */
+.square4-content {
+    background-color: #1BB577; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Espaço interno para o texto */
+}
+
+.square4-headline {
+    font-family: 'system-ui', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 28px;
+    color: #fff;
+}
+
+.square4-highlight {
+    font-family: 'system-ui', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 28px;
+    color: rgb(184, 245, 75);
+}
+
+.square4-percentage {
+    font-family: 'system-ui', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 63px;
+    color: rgb(0, 75, 43);
+}
+
+
+/* ----- SQUARE 5 ----- */
+/* Father class () */
+
+.square5-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.award-img {
+    max-width: 80%; /* Garante que a imagem ocupe no máximo 80% da largura da div */
+    max-height: 80%; /* Garante que a imagem ocupe no máximo 80% da altura da div */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* ----- SQUARE 6: GOOGLE ----- */
+/* Father class (.square8-content) */
+.square6-content {
+    background-color: #B8F54B;
+}
+
+
+
+/* ----- SQUARE 7: CIELO LOGO ----- */
+/* Father class (.square8-content) */
+.cielo-logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cielo-logo .logo {
+    max-width: 60%; /* Garante que a imagem ocupe no máximo 100% da largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: opacity 0.3s ease;
+    position: absolute;
+}
+
+/* ----- SQUARE 8 ----- */
+/* Father class (.square8-content) */
+
+.square8-content {
+    background-color: #4DD95F; /* Cor de fundo especificada */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Espaço interno para o texto */
+}
+
+.square8-headline {
+    font-family: 'system-ui', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 33px;
+    line-height: 28px;
+    color: rgb(0, 75, 52);
+}
+.square8-underline {
+    display: inline-block;
+    border-bottom: 4px solid #b8f54b; /* Linha amarela abaixo do texto */
+    padding-bottom: 2px; /* Espaço entre o texto e a linha */
+}
+
+.square8-subheadline {
+    font-family: 'system-ui', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/* breakpoint - mobile */
+@media(max-width: 900px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Uma coluna */
+        grid-auto-rows: 40vh; /* Altura ajustada para ocupar mais da tela verticalmente */
+        height: 100vh; /* Garante que a grade ocupe a altura total da tela */
+    }
+    
+    .grid-item {
+        grid-column: span 1; /* Cada item ocupa uma coluna */
+        grid-row: span 1; /* Cada item ocupa uma linha */
+    }
+
+    .square1-content {
+        justify-content: flex-end; /* Alinha a imagem à direita */
+        padding-left: 10px; /* Mantém o padding fixo à esquerda */
+        padding-right: 0; /* Remove padding à direita */
+        padding-top: 10px; /* Reduz o padding em telas menores */
+        padding-bottom: 10px; /* Reduz o padding em telas menores */
+        box-sizing: border-box; /* Inclui padding no tamanho da div */
+        overflow: hidden;
+    }
+
+    .laptop-img {
+        max-width: 100%;
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
